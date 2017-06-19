@@ -59,7 +59,7 @@ Woah! Now there is a good looking function. The logic has been combined and we w
 
 ##### Performance Optimizations
 
-Anytime we are implementing algorithms we should seek to minimize both the time and the amount of memory that is required to complete them. Memory management is particularly important when writing recursively, as it is easy to carelessly pass more data as arguments than we need in each subsequent function call.
+Anytime we are implementing algorithms we should seek to minimize both the time and the amount of memory that is required to complete them. Memory management is particularly important when writing recursively as it is easy to carelessly pass more data as arguments than we need in each subsequent function call.
 
 In our example above, we have both an expensive operation occurring with each recursion, as well as an excess of data being passed! Our culprit is the ```Array.prototype.slice()``` method that we are calling on ```arr```! In addition to copying half of the current array size with each iteration, we are passing that whole new array to the next recursive call. Meanwhile, as our function(s) chug along, all of these needless arrays are sitting in memory, waiting for the stack to be unwound.
 
