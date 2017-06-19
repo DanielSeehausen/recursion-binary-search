@@ -12,7 +12,7 @@ In our recursive solution, we have 4 base cases we need to address:
   3. The ```target``` may be in the array, at a position > the current: *Recursion required!*
   4. The ```target``` may be in the array, at a position < the current: *Recursion required!*
 
-If we encounter step 3 or 4, we know that we must recur with an altered argument (lest we place ourselves in an endless loop). As our ```target``` argument should never change, our only option is to alter the array! Let's give it a shot.
+If we encounter case 3 or 4, we know that we must recur with an altered argument (lest we place ourselves in an endless loop). As our ```target``` argument should never change, our only option is to alter the array! Let's give it a shot.
 
 ```javascript
 function binarySearch(arr, target) {
